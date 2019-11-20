@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_reporte_tarea_form" model="ir.ui.view">
+            <field name="name">view.reporte.tarea.form</field>
+            <field name="model">reporte.tarea</field>
+            <field name="arch" type="xml">
+                <form name="Test Request Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Request"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="date_form"/>
+                                <field name="date_to"/>
+                            </group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="product_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_reporte_tarea_tree" model="ir.ui.view">
+            <field name="name">view.reporte.tarea.tree</field>
+            <field name="model">reporte.tarea</field>
+            <field name="arch" type="xml">
+                <tree string="Reporte tarea tree">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="product_id"/>
+                    <field name="date_form"/>
+                    <field name="date_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_reporte_tarea_views" model="ir.actions.act_window">
+            <field name="name">Reporte tarea</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reporte.tarea</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+        <!-- Top menu item -->
+        <menuitem id="menu_reporte_tarea_root" name="Reporte tarea" sequence="10"/>
+        <!-- menu categories -->
+        <menuitem id="menu_reporte_tarea_categ" name="Reporte tarea" parent="menu_reporte_tarea_root" sequence="1"/>
+        <!-- actions -->
+        <menuitem id="menu_reporte_tarea" name="Reporte tarea" parent="menu_reporte_tarea_categ"
+                  action="action_reporte_tarea_views" sequence="0"/>
+
+    </data>
+</odoo>
