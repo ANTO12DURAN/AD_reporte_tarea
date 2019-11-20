@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_reporte_formulacion_form" model="ir.ui.view">
+            <field name="name">view.reporte.formulacion.form</field>
+            <field name="model">reporte.formulacion</field>
+            <field name="arch" type="xml">
+                <form name="Formulario formulacion">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Formulacion"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_reporte_formulacion_tree" model="ir.ui.view">
+            <field name="name">view.reporte.formulacion.tree</field>
+            <field name="model">reporte.formulacion</field>
+            <field name="arch" type="xml">
+                <tree string="formulacion tree">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_reporte_formulacion_views" model="ir.actions.act_window">
+            <field name="name">Formulacion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reporte.formulacion</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+        <!-- Top menu item -->
+        <!-- <menuitem id="menu_reporte_tarea_root" name="Reporte tarea" sequence="10"/> -->
+        <!-- menu categories -->
+        <menuitem id="menu_reporte_formulacion_categ" name="formulacion" parent="menu_reporte_tarea_root" sequence="1"/>
+        <!-- actions -->
+        <menuitem id="menu_reporte_formulacion" name="Formulacion" parent="menu_reporte_formulacion_categ"
+                  action="action_reporte_formulacion_views" sequence="0"/>
+
+    </data>
+</odoo>

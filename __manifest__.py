@@ -2,14 +2,10 @@
 {
     'name': "ReporteTareas",
 
-    'summary': """
-        Permite generar las tareas que se deben realizar en el cultivo""",
+    'summary': """ Permite generar las tareas que se deben realizar en el cultivo""",
 
-    'description': """(, 
-        Genera las tareas que se deben realizar en el cultivo: 
-        mostrando responsables a cargo, lote utilizado, 
-        formulacion (productos a utilizar) y 
-        las actividades necesarias para el cumplimiento de dichas tareas
+    'description': """ 
+        Genera las tareas que se deben realizar en el cultivo       
     """,
 
     'author': "Antonieta Duran",
@@ -28,7 +24,11 @@
     'data': [
         'security/ir.model.access.csv',
         'views/tarea_view.xml',
-        'views/lote_view.xml'
+        'views/lote_view.xml',
+        'views/responsable_view.xml',
+        'views/formulacion_view.xml',
+        'views/tipoactividad_view.xml',
+        'views/actividad_view.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode

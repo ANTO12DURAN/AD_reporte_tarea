@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_reporte_responsable_form" model="ir.ui.view">
+            <field name="name">view.reporte.responsable.form</field>
+            <field name="model">reporte.responsable</field>
+            <field name="arch" type="xml">
+                <form name="Formulario responsable">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Responsable"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+
+                                <field name="employee_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_reporte_responsable_tree" model="ir.ui.view">
+            <field name="name">view.reporte.responsable.tree</field>
+            <field name="model">reporte.responsable</field>
+            <field name="arch" type="xml">
+                <tree string="responsable tree">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="employee_id"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_reporte_responsable_views" model="ir.actions.act_window">
+            <field name="name">Responsable</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reporte.responsable</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+        <!-- Top menu item -->
+        <!-- <menuitem id="menu_reporte_tarea_root" name="Reporte tarea" sequence="10"/> -->
+        <!-- menu categories -->
+        <menuitem id="menu_reporte_responsable_categ" name="Responsable" parent="menu_reporte_tarea_root" sequence="1"/>
+        <!-- actions -->
+        <menuitem id="menu_reporte_responsable" name="Responsable" parent="menu_reporte_responsable_categ"
+                  action="action_reporte_responsable_views" sequence="0"/>
+
+    </data>
+</odoo>

@@ -1,3 +1,7 @@
-id                  ,name                       ,model_id:id        ,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_reporte_tarea,reporte_tarea.reporte_tarea,model_reporte_tarea,           ,1        ,1         ,1          ,1
-access_reporte_lote ,reporte_lote.reporte_lote  ,model_reporte_lote ,           ,1        ,1         ,1          ,1
+id                          ,name                                       ,model_id:id                ,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_reporte_tarea        ,reporte_tarea.reporte_tarea                ,model_reporte_tarea        ,           ,1        ,1         ,1          ,1
+access_reporte_lote         ,reporte_lote.reporte_lote                  ,model_reporte_lote         ,           ,1        ,1         ,1          ,1
+access_reporte_responsable  ,reporte_ressponsable.reporte_responsable   ,model_reporte_responsable  ,           ,1        ,1         ,1          ,1
+access_reporte_formulacion  ,reporte_formulacion.reporte_formulacion    ,model_reporte_formulacion  ,           ,1        ,1         ,1          ,1
+access_reporte_tipoactividad,reporte_tipoactividad.reporte_tipoactividad,model_reporte_tipoactividad,           ,1        ,1         ,1          ,1
+access_reporte_actividad    ,reporte_actividad.reporte_actividad        ,model_reporte_actividad    ,           ,1        ,1         ,1          ,1
