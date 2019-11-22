@@ -16,9 +16,11 @@
                         </div>
                         <group>
                             <group>
-                                <field name="name"/>
-                                <field name="description"/>
+                                <!--<field name="name"/>
+                                <field name="description"/>-->
                                 <field name="tipoactividad_id"/>
+                                <field name="responsable_id"/>
+                                <field name="reportetarea_id"/>
                             </group>
                         </group>
                     </sheet>
@@ -31,9 +33,11 @@
             <field name="model">reporte.actividad</field>
             <field name="arch" type="xml">
                 <tree string="actividad tree">
-                    <field name="name"/>
-                    <field name="description"/>
+                    <!-- <field name="name"/>
+                     <field name="description"/> -->
                     <field name="tipoactividad_id"/>
+                    <field name="responsable_id"/>
+                    <field name="reportetarea_id"/>
                 </tree>
             </field>
         </record>
@@ -48,7 +52,7 @@
         <!-- Top menu item -->
         <!-- <menuitem id="menu_reporte_tarea_root" name="Reporte tarea" sequence="10"/> -->
         <!-- menu categories -->
-        <menuitem id="menu_reporte_actividad_categ" name="Actividad" parent="menu_reporte_tarea_root" sequence="1"/>
+        <!--<menuitem id="menu_reporte_actividad_categ" name="Actividad" parent="menu_reporte_tarea_root" sequence="1"/>-->
         <!-- actions -->
         <menuitem id="menu_reporte_actividad" name="Actividad" parent="menu_reporte_actividad_categ"
                   action="action_reporte_actividad_views" sequence="0"/>

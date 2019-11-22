@@ -48,7 +48,7 @@
         <!-- Top menu item -->
         <!-- <menuitem id="menu_reporte_tarea_root" name="Reporte tarea" sequence="10"/> -->
         <!-- menu categories -->
-        <!-- <menuitem id="menu_reporte_actividad_categ" name="Actividad" parent="menu_reporte_tarea_root" sequence="1"/>-->
+        <menuitem id="menu_reporte_actividad_categ" name="Actividad" parent="menu_reporte_tarea_root" sequence="1"/>
         <!-- actions -->
         <menuitem id="menu_reporte_tipoactividad" name="Tipo Actividad" parent="menu_reporte_actividad_categ"
                   action="action_reporte_tipoactividad_views" sequence="0"/>
